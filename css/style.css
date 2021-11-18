@@ -20,15 +20,20 @@ body {
     background-color: #000;
 }
 
-@keyframes loading {
-    0% {
-        margin-top: 0;
+@keyframes loading-circles {
+    0%,
+    100% {
+      transform: translateY(0);
     }
     50% {
-        margin-top: 10px;
+      background-color: #1976d2;
+      transform: translateY(20px);
     }
-    100% {
-        margin-top: 0;
+}
+
+@keyframes loading-text {
+    50% {
+      color: #1976d2;
     }
 }
 
@@ -38,7 +43,12 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-    background-color: #fff;
+}
+
+.loading > .loading-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .loading > .container {
@@ -49,11 +59,14 @@ body {
 }
 
 .loading > .container > span {
-    font-size: 2.5em;
+    font-size: 3em;
+    color: transparent;
+    --delay: 0s;
+    animation: loading-text 1s var(--delay) ease-in infinite;
 }
 
 .loading > .container > .load {
-    margin: 20px auto 0;
+    margin: 10px auto 0;
     height: 40px;
     width: 90px;
 }
@@ -64,10 +77,20 @@ body {
     width: 20px;
     margin-left: 10px;
     border-radius: 10px;
-    background-color: #000;
-    animation: loading .3s linear infinite;
+    background-color: transparent;
+    --delay: 0s;
+    animation: loading-circles 1s var(--delay) ease-in infinite;
 }
 
-.loading > .container > .load > .circle:first-child {
+.loading > .container > .load > .first {
     margin-left: 0;
+    --delay: .1s;
+}
+
+.loading > .container > .load > .second {
+    --delay: .3s;
+}
+
+.loading > .container > .load > .third {
+    --delay: .5s;
 }
