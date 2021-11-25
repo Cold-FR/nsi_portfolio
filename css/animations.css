@@ -1,0 +1,25 @@
+@keyframes loading-circles {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      background-color: #1976d2;
+      transform: translateY(20px);
+    }
+}
+
+@keyframes loading-text {
+    50% {
+      color: #1976d2;
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        top:0;
+    }
+    100% {
+        top: -100%;
+    }
+}

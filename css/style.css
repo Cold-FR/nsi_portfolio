@@ -13,28 +13,32 @@
 }
 
 html {
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 body {
-    background-color: #000;
+    background: #16222A;
+    color: #fff;
 }
 
-@keyframes loading-circles {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      background-color: #1976d2;
-      transform: translateY(20px);
-    }
+header, main, footer {
+    width: 100%;
 }
 
-@keyframes loading-text {
-    50% {
-      color: #1976d2;
-    }
+header, footer {
+    background-color: #3A6073;
+}
+
+header {
+    height: 400px;
+}
+
+main {
+    height: auto;
+}
+
+footer {
+    height: 200px;
 }
 
 .loading {
@@ -43,12 +47,8 @@ body {
     width: 100%;
     top: 0;
     left: 0;
-}
-
-.loading > .loading-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
+    background-color: #fff;
+    transition: .3S;
 }
 
 .loading > .container {
@@ -59,10 +59,11 @@ body {
 }
 
 .loading > .container > span {
+    user-select: none;
     font-size: 3em;
     color: transparent;
     --delay: 0s;
-    animation: loading-text 1s var(--delay) ease-in infinite;
+    animation: loading-text 1.5s var(--delay) ease-in infinite;
 }
 
 .loading > .container > .load {
@@ -82,15 +83,15 @@ body {
     animation: loading-circles 1s var(--delay) ease-in infinite;
 }
 
-.loading > .container > .load > .first {
+.loading > .container > .load > .circle:nth-child(1) {
     margin-left: 0;
     --delay: .1s;
 }
 
-.loading > .container > .load > .second {
+.loading > .container > .load > .circle:nth-child(2) {
     --delay: .3s;
 }
 
-.loading > .container > .load > .third {
+.loading > .container > .load > .circle:nth-child(3) {
     --delay: .5s;
 }
