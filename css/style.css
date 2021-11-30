@@ -5,11 +5,17 @@
     font-display: swap
 }
 
+@font-face {
+    font-family: 'Cmd';
+    src: url('../fonts/windows_command_prompt.ttf') format('truetype'),
+    local('Windows Command Prompt');
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu';
 }
 
 html {
@@ -19,6 +25,7 @@ html {
 body {
     background: #16222A;
     color: #fff;
+    font-family: 'Ubuntu';
 }
 
 header, main, footer {
@@ -30,11 +37,12 @@ header, footer {
 }
 
 header {
-    height: 400px;
+    height: 300px;
 }
 
 main {
     height: auto;
+    padding: 30px 0;
 }
 
 footer {
@@ -94,4 +102,25 @@ footer {
 
 .loading > .container > .load > .circle:nth-child(3) {
     --delay: .5s;
+}   
+
+#type::after {
+    content: '_';
+    animation: blink 1s infinite;
+}
+
+.content {
+    margin: 0 auto;
+    width: 60%;
+    padding: 20px 15px;
+}
+
+.presentation {
+    background-color: #000;
+    font-family: 'Cmd';
+}
+
+.bigger {
+    font-size: 1.25em;
+    color: #1976d2;
 }
