@@ -20,7 +20,17 @@ function typeWriter() {
   }
 }
 
-document.getElementById('speed-up').addEventListener('click', () => speed > 10 ? speed -= 10 : speed = 10);
-document.getElementById('speed-reset').addEventListener('click', () => speed = 50)
-document.getElementById('speed-down').addEventListener('click', () => speed += 10);
+document.getElementById('speed-up').addEventListener('click', () => changeSpeed('up'));
+document.getElementById('speed-reset').addEventListener('click', () => changeSpeed('reset'))
+document.getElementById('speed-down').addEventListener('click', () => changeSpeed('down'));
 
+function changeSpeed(action) {
+  if(action === 'down') {
+    speed > 10 ? speed -= 10 : speed = 10;
+  } else if (action === 'up') {
+    speed += 10;
+  } else if (action === 'reset') {
+    speed = 50;
+  }
+  return document.getElementById('speed-reset').innerText = `${speed}ms`;
+}
