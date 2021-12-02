@@ -22,10 +22,11 @@
 
     <header>
         <div class="content">
-            <h2>Bonjour !</h2>
-            <h1>Je m'appelle <span class="bigger">Clément</span></h2>
-            <h2>Je suis <span class="bigger">Développeur Web Amateur</span></h2>
-            <nav>
+            <div class="top">
+                <h1>Développeur Web Amateur</h2>
+                <h3>Je suis passionné d'informatique, je code amateurement dans le Web depuis 5 ans, et j'adore ça.</h3>
+            </div>
+            <nav class="bottom">
                 <ul>
                     <a href="./index.html">
                         <li>À propos de moi</li>
@@ -40,10 +41,13 @@
 
     <main>
         <div class="content presentation">
-            <div class="change-speed">
-                <div id="speed-up">+</div>
-                <div id="speed-reset">0</div>
-                <div id="speed-down">-</div>
+            <div class="top">
+                <span class="title">Ma présentation</span>
+                <div class="change-speed">
+                    <div class="speed" id="speed-up">+</div>
+                    <div class="speed" id="speed-reset">50ms</div>
+                    <div class="speed" id="speed-down">-</div>
+                </div>
             </div>
             <p id="type"></p>
         </div>    
