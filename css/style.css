@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Ubuntu';
-    src: url('../fonts/power.ttf') format('truetype'),
+    src: url('../fonts/Ubuntu.ttf') format('truetype'),
     local('Ubuntu Condensed');
     font-display: swap
 }
 
 @font-face {
     font-family: 'Cmd';
-    src: url('../fonts/windows_command_prompt.ttf') format('truetype'),
-    local('Windows Command Prompt');
+    src: url('../fonts/PixelOperatorMono.ttf') format('truetype'),
+    local('PixelOperatorMono');
     font-display: swap;
 }
 
@@ -37,7 +37,7 @@ header, footer {
 }
 
 header {
-    height: 300px;
+    height: 200px;
 }
 
 main {
@@ -46,7 +46,7 @@ main {
 }
 
 footer {
-    height: 200px;
+    height: 150px;
 }
 
 .loading {
@@ -104,23 +104,78 @@ footer {
     --delay: .5s;
 }   
 
-#type::after {
-    content: '_';
-    animation: blink 1s infinite;
-}
-
 .content {
     margin: 0 auto;
     width: 60%;
-    padding: 20px 15px;
+    padding: 10px 20px 20px;
+}   
+
+.content > .top {
+    margin-bottom: 10px;
 }
 
-.presentation {
-    background-color: #000;
-    font-family: 'Cmd';
+.content > .top, .content > .bottom {
+    float: left;
+    width: 100%;
+}
+
+header > .content {
+    height: 100%;
+}
+
+nav > ul {
+    display: table;
+    margin: 0 auto;
+}
+
+nav > ul > a {
+    padding: 15px;
+    background-color: #1976d2;
+    margin-right: 20px;
+    border-radius: 12px;
+    float: left;
+}
+
+nav > ul > a:last-child {
+    margin-right: 0;
+}
+
+nav > ul > a > li {
+    display: inline-block;
 }
 
 .bigger {
     font-size: 1.25em;
     color: #1976d2;
+}
+
+.presentation {
+    background-color: #000;
+    font-family: 'Cmd';
+    border-radius: 8px;
+}
+
+.presentation > .top > .title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.change-speed {
+    float: right;
+    user-select: none;
+}
+
+.change-speed > .speed {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.change-speed > .speed:hover {
+    color: #1976d2;
+}
+
+#type::after {
+    content: '_';
+    animation: blink 1s infinite;
 }
