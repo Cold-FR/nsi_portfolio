@@ -50,7 +50,7 @@ main {
     top: 0;
     left: 0;
     background-color: #fff;
-    transition: .3S;
+    transition: 0.3s;
 }
 
 .loading > .container {
@@ -87,20 +87,19 @@ main {
 
 .loading > .container > .load > .circle:nth-child(1) {
     margin-left: 0;
-    --delay: .1s;
+    --delay: 0.1s;
 }
 
 .loading > .container > .load > .circle:nth-child(2) {
-    --delay: .3s;
+    --delay: 0.3s;
 }
 
 .loading > .container > .load > .circle:nth-child(3) {
-    --delay: .5s;
+    --delay: 0.5s;
 }   
 
 canvas {
     display: block;
-    vertical-align: bottom;
 }
 
 #particles {
@@ -114,7 +113,7 @@ canvas {
 .content {
     margin: 0 auto;
     width: 60%;
-    padding: 10px 20px 20px;
+    padding: 10px 20px 10px;
     position: relative;
 }   
 
