@@ -1,1 +1,20 @@
-txt = ['Name: Clément', 'Age: 16', 'Hobbies: '];
+txt = [
+  '"Name": "Clément",', 
+  '"Age": 16,', 
+  '"Hobbies": ["Technologie", "Informatique", "Jeux vidéos"],',
+  '"Computer Science Amateuring": {',
+  '   "Languages": {',
+  '       "HTML": true,',
+  '       "CSS": true,',
+  '       "JS": true,',
+  '       "PHP": true,',
+  '       "SQL": true',
+  '   }',
+  '},',
+  '"Description": "Je m\'appelle Clément, j\'ai 16 ans,',
+  'je me passionne pour le numérique et l\'informatique depuis ma 6ème.",',
+  '"Contact": {',
+  '   "GitLab": "@ColdFR",',
+  '   "GitHub": "@Cold-FR"',
+  '}'        
+];

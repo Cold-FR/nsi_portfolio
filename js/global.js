@@ -27,8 +27,8 @@ function typeWriter() {
         sentence += 1;
         setTimeout(() => {
           document.getElementById('type').innerHTML += '<br/>';
-          timeout = setTimeout(() => typeWriter(), 1000);
-        }, 500);
+          timeout = setTimeout(() => typeWriter(), speed + 100);
+        }, speed);
       }
     }
   }
