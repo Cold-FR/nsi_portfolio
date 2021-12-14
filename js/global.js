@@ -1,22 +1,36 @@
+const typingEvent = new Event('typing');
 window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.getElementById('loader');
         loader.style.animation = 'slide-up .5s forwards';
         setTimeout(() => {
-            typeWriter();
+          timeout = setTimeout(() => typeWriter(), 1000);
         }, 1000);
-    }, 2000);
+    }, 1000);
 });
 
+let txt = [];
 let letters = 0;
-let txt = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi perferendis, ad consequuntur itaque, necessitatibus repellendus obcaecati, nulla alias repellat vitae est consectetur fugiat sed? Ea voluptate dicta blanditiis tempore? Deserunt!';
+let sentence = 0;
 let speed = 50;
+let timeout = null;
 
 function typeWriter() {
-  if (letters < txt.length) {
-    document.getElementById('type').innerHTML += txt.charAt(letters);
+  if (letters < txt[sentence].length) {
+    document.getElementById('type').innerHTML += txt[sentence][letters];
     letters++;
-    setTimeout(typeWriter, speed);
+    timeout = setTimeout(typeWriter, speed);
+    if(letters === txt[sentence].length) {
+      letters = 0;
+      clearTimeout(timeout);
+      if(sentence + 1 !== txt.length) {
+        sentence += 1;
+        setTimeout(() => {
+          document.getElementById('type').innerHTML += '<br/>';
+          timeout = setTimeout(() => typeWriter(), 1000);
+        }, 500);
+      }
+    }
   }
 }
 
