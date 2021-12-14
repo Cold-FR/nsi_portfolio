@@ -1,1 +1,1 @@
-txt = ['Name: Clément', 'Age: 16', 'Name: Clément', 'Name: Clément'];
+txt = ['Name: Clément', 'Age: 16', 'Hobbies: '];
