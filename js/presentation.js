@@ -7,8 +7,7 @@ txt = [
   '       "HTML": true,',
   '       "CSS": true,',
   '       "JS": true,',
-  '       "PHP": true,',
-  '       "SQL": true',
+  '       "PHP": true',
   '   }',
   '},',
   '"Description": "Je m\'appelle Clément, j\'ai 16 ans,',
@@ -18,3 +17,10 @@ txt = [
   '   "GitHub": "@Cold-FR"',
   '}'        
 ];
+
+document.addEventListener('writtingLasted', () => {
+  const body = document.getElementById('type');
+  body.innerHTML = body.innerHTML.replace('"GitLab": "@ColdFR"', '<a href="https://gitlab.com/ColdFR" target="_blank">"GitLab": "@ColdFR"</a>');
+  body.innerHTML = body.innerHTML.replace('"GitHub": "@Cold-FR"', '<a href="https://github.com/Cold-FR" target="_blank">"GitHub": "@Cold-FR"</a>');
+});
+

@@ -1,14 +1,14 @@
-const typingEvent = new Event('typing');
 window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.getElementById('loader');
         loader.style.animation = 'slide-up .5s forwards';
         setTimeout(() => {
           timeout = setTimeout(() => typeWriter(), 1000);
-        }, 1000);
+        }, 500);
     }, 1000);
 });
 
+const typingEvent = new Event('writtingLasted');
 let txt = [];
 let letters = 0;
 let sentence = 0;
@@ -29,6 +29,8 @@ function typeWriter() {
           document.getElementById('type').innerHTML += '<br/>';
           timeout = setTimeout(() => typeWriter(), speed + 100);
         }, speed);
+      } else {
+        document.dispatchEvent(typingEvent);
       }
     }
   }
