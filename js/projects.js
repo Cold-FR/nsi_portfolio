@@ -26,9 +26,9 @@ txt = [
 
 document.addEventListener('writtingLasted', () => {
   const body = document.getElementById('type');
-  body.innerHTML = body.innerHTML.replace('"https://citywish.fr"', '<a href="https://citywish.fr" target"_blank">"https://citywish.fr"</a>');
-  body.innerHTML = body.innerHTML.replace('"https://heart-release.netlify.app"', '<a href="https://heart-release.netlify.app" target"_blank">"https://heart-release.netlify.app"</a>');
-  body.innerHTML = body.innerHTML.replace('"https://github.com/Cold-FR/ENT_BOT"', '<a href="https://github.com/Cold-FR/ENT_BOT" target"_blank">"https://github.com/Cold-FR/ENT_BOT"</a>');
+  body.innerHTML = body.innerHTML.replace('"https://citywish.fr"', '<a href="https://citywish.fr" target="_blank">"https://citywish.fr"</a>');
+  body.innerHTML = body.innerHTML.replace('"https://heart-release.netlify.app"', '<a href="https://heart-release.netlify.app" target="_blank">"https://heart-release.netlify.app"</a>');
+  body.innerHTML = body.innerHTML.replace('"https://github.com/Cold-FR/ENT_BOT"', '<a href="https://github.com/Cold-FR/ENT_BOT" target="_blank">"https://github.com/Cold-FR/ENT_BOT"</a>');
 
   body.innerHTML = body.innerHTML.replace('"citywish.png"', '<br/>        <img src="./imgs/citywish.png"/>');
   body.innerHTML = body.innerHTML.replace('"heartrelease.png"', '<br/>        <img src="./imgs/heartrelease.png"/>');
